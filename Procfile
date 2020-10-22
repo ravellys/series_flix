@@ -1,1 +1,2 @@
-web: gunicorn seriesflix_project.wsgi --log-file -
+release: python manage.py migrate --no-input
+web: gunicorn icsmp_project.wsgi --log-file -
