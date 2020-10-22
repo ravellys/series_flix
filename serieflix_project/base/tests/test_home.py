@@ -2,7 +2,7 @@ import pytest
 from django.test import Client
 from django.urls import reverse
 
-#from serieflix_project.django_assertions import assert_contains
+# from serieflix_project.django_assertions import assert_contains
 
 
 @pytest.fixture
