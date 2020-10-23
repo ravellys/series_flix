@@ -1,2 +1,2 @@
-release: python manage.py migrate --no-input
+release: python manage.py migrate --noinput
 web: gunicorn serieflix_project.wsgi --log-file -
