@@ -1,0 +1,18 @@
+.main-footer{
+    background-color: #282a36;
+}
+
+body {
+    background-color: #44475a;
+}
+
+li a:hover {
+    color: white;
+    background: #00a293;
+    font-weight: bolder;
+
+}
+
+
+
+
