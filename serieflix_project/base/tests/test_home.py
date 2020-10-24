@@ -25,4 +25,3 @@ def test_title_link(resp):
 
 def test_footer_link(resp):
     assert_contains(resp, "mailto:lucas.ravellys@ufpe.br")
-
