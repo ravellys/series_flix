@@ -11,5 +11,5 @@ def resp(client: Client):
     return resp
 
 
-def test_status_code(resp):
-    assert resp.status_code == 200
+# def test_status_code(resp):
+#    assert resp.status_code == 200
