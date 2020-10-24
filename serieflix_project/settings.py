@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'collectfast',
     'django.contrib.staticfiles',
     'serieflix_project.base',
+    'serieflix_project.genero',
 ]
 
 MIDDLEWARE = [

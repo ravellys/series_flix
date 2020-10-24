@@ -1,0 +1,25 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}SeriesFlix - Gênero{% endblock title %}
+
+
+{% block body %}
+
+    <main class="d-flex m-4 p-4 bg-danger" >
+
+        <div class="container p-4">
+            <div class="p-4 row justify-content-center">
+                <div class="cols align-content-center">
+                    <form onsubmit="/genero" method="post">
+
+                        {{ form }}
+                        {% csrf_token %}
+
+                        <input type="submit" class="btn btn-dark" value="Enviar"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}

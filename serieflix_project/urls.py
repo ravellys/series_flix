@@ -20,6 +20,7 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('serieflix_project.base.urls')),
+    path('genero/', include('serieflix_project.genero.urls')),
 ]
 
 if settings.DEBUG:

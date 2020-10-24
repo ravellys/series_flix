@@ -2,7 +2,7 @@ import pytest
 from django.test import Client
 from django.urls import reverse
 
-# from serieflix_project.django_assertions import assert_contains
+from serieflix_project.django_assertions import assert_contains
 
 
 @pytest.fixture
@@ -13,3 +13,16 @@ def resp(client: Client):
 
 def test_status_code(resp):
     assert resp.status_code == 200
+
+
+def test_title(resp):
+    assert_contains(resp, '<title>SeriesFlix</title>')
+
+
+def test_title_link(resp):
+    assert_contains(resp, f'href="{reverse("base:home")}">')
+
+
+def test_footer_link(resp):
+    assert_contains(resp, "mailto:lucas.ravellys@ufpe.br")
+
