@@ -1,0 +1,78 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}SeriesFlix - Series{% endblock title %}
+
+
+{% block body %}
+
+    <main class="container p-4" >
+        <div class="container">
+            {% if series_records %}
+            <table class="table d-table table-bordered table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">Serie</th>
+                  <th scope="col">Genero</th>
+                  <th scope="col">Alterar</th>
+                  <th scope="col">Excluir</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for serie in series_records %}
+                <tr>
+                  <td>{{ serie.nome }}</td>
+                  <td>{{ serie.idGenero.descricao }}</td>
+                  <td><button class="btn btn-warning" onclick="updateItem({{serie.id}})" >Alterar</button></td>
+                  <td><button class="btn btn-danger" onclick="deleteItem({{serie.id}})">Deletar</button></td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+            {% else %}
+            <h3 class="text-center"> Vazio </h3>
+            {% endif %}
+        </div>
+
+        <div class="container p-4">
+            <div class="p-4 row justify-content-center">
+                <div class="cols align-content-center">
+                    <form onsubmit="/series" method="post">
+
+                        {{ form }}
+                        {% csrf_token %}
+
+                        <input type="submit" id="name" class="btn btn-dark" value="Enviar" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+    function deleteItem(id){
+        <!-- seleciona o objeto desejado pelo value-->
+        const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+        <!-- Novo request-->
+        const request = new Request(
+        "/series/delete/"+id,
+        {headers: {'X-CSRFToken': csrftoken}}
+        );
+        fetch(request, {
+            method: 'DELETE',
+            mode: 'same-origin'
+        }).then(function(response) {
+            if(response.status===500){
+                alert("Não foi possível excluir. Gênero em uso.");
+            } else{
+                location.replace("/series")
+            }
+        })
+    }
+
+    function updateItem(id) {
+        location.replace("/series/update/"+id)
+    }
+
+    </script>
+
+{% endblock %}

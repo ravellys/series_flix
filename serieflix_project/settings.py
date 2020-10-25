@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'serieflix_project.base',
     'serieflix_project.genero',
+    'serieflix_project.series',
 ]
 
 MIDDLEWARE = [

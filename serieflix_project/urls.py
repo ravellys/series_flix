@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('serieflix_project.base.urls')),
     path('genero/', include('serieflix_project.genero.urls')),
+    path('series/', include('serieflix_project.series.urls')),
 ]
 
 if settings.DEBUG:

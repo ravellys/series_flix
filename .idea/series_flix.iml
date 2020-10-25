@@ -26,6 +26,7 @@
       <list>
         <option value="$MODULE_DIR$/serieflix_project/genero/templates" />
         <option value="$MODULE_DIR$/serieflix_project/base/templates" />
+        <option value="$MODULE_DIR$/serieflix_project/series/templates" />
       </list>
     </option>
   </component>
