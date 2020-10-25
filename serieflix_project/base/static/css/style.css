@@ -1,13 +1,3 @@
-.main-footer{
-    background-color: #282a36;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 * {
     padding: 0;
     margin: 0;
@@ -16,42 +6,31 @@
 }
 
 body {
-    width: 100%;
-    height: 100vh;
     background: #44475a;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
-div {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
+footer {
+    background-color: #282a36;
 }
 
 li a:hover {
     color: white;
     background: #44475a;
     font-weight: bolder;
-
 }
 
-a {
-    width: 60px;
-    height: 60px;
+footer a {
+    width: 30px;
+    height: 30px;
     color: #fff;
-    background-color: #ccc;
+    background-color: transparent;
     text-decoration: none;
-    margin: 0 32px;
-    transform: rotate(-30deg) skew(25deg);
+    margin: 2px;
 
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+    float: left;
+    justify-items: center;
+    align-content: space-around;
 }
 
 i.fa {
@@ -59,7 +38,6 @@ i.fa {
     height: 100%;
     font-size: 28px;
     border-radius: 4px;
-    transition: 0.5s;
 
     display: flex;
     justify-content: center;
@@ -68,27 +46,22 @@ i.fa {
 
 /* Cor */
 
-a:nth-child(1) i,
-a:nth-child(1) span {
+a:nth-child(1) i {
     background: #3b5999;
 }
 
-a:nth-child(2) i,
-a:nth-child(2) span {
+a:nth-child(2) i {
     background: #55acee;
 }
 
-a:nth-child(3) i,
-a:nth-child(3) span {
-    background: #dd4b39;
-}
-
-a:nth-child(4) i,
-a:nth-child(4) span {
+a:nth-child(3) i {
     background: #0077b5;
 }
 
-a:nth-child(5) i,
-a:nth-child(5) span {
+a:nth-child(4) i {
     background: #e4405f;
-}c
+}
+
+a:nth-child(5) i {
+    background: black;
+}
